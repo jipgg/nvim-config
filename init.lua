@@ -9,6 +9,7 @@ require "setup.vim"
 require "setup.keymappings"
 vim.cmd "colorscheme kanagawa-dragon"
 require "setup.module_setup"
+--require "mason_handlers.luau_lsp"
 
 --vim.cmd "set background=light"
 --vim.cmd "colorscheme zenbones"

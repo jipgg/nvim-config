@@ -15,12 +15,12 @@ return function()
         server = {
             settings = {
                 ["luau-lsp"] = {
+                    diagnostics = {
+                        strictDatamodelTypes = true,
+                    },
                     completion = {
-                        diagnostics = {
-                            strictDatamodelTypes = true,
-                        },
                         imports = {
-                            suggestServices = true,
+                          suggestServices = true,
                             suggestRequires = false,
                             enabled = true,
                         },

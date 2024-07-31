@@ -72,7 +72,7 @@ return {
             end)
 
             require('mason-lspconfig').setup({
-                ensure_installed = {"luau_lsp"},
+                ensure_installed = {},
                 handlers = require "mason_handlers"
                 --[[
                 handlers = {
