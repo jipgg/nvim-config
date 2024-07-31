@@ -13,7 +13,6 @@
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "56db3d5ce5476b183783160e6045f7337ba12b83" },
   "lualine-time": { "branch": "main", "commit": "8838875e2e787293bb905d23dbb91ef4bde188ea" },
   "lualine.nvim": { "branch": "master", "commit": "544dd1583f9bb27b393f598475c89809c4d5e86b" },
-  "luau-lsp.nvim": { "branch": "main", "commit": "3ad89b5acea551f96eacb6db250fdcccc2825ff2" },
   "lush.nvim": { "branch": "main", "commit": "6a254139d077ad53be7e4f3602c8da0c84447fd9" },
   "luvit-meta": { "branch": "main", "commit": "ce76f6f6cdc9201523a5875a4471dcfe0186eb60" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "ba9c2f0b93deb48d0a99ae0e8d8dd36f7cc286d6" },

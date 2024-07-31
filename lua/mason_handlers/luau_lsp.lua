@@ -8,14 +8,15 @@ return function()
             port = 3667,
         },
         types = {
-            --definition_files = {"c:/RobloxTypeDefinitions/globalTypes.PluginSecurity.d.luau"},
-            --documentation_files = {"c:/RobloxTypeDefinitions/api-docs.json"},
+            definition_files = {"c:/RobloxTypeDefinitions/globalTypes.PluginSecurity.d.luau"},
+            documentation_files = {"c:/RobloxTypeDefinitions/api-docs.json"},
             roblox_security_level = "PluginSecurity"
         },
         server = {
             settings = {
                 ["luau-lsp"] = {
                     diagnostics = {
+                        workspace = true,
                         strictDatamodelTypes = true,
                     },
                     completion = {
