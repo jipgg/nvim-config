@@ -16,7 +16,7 @@ return function()
             settings = {
                 ["luau-lsp"] = {
                     diagnostics = {
-                        strictDatamodelTypes = true,
+                        strictDatamodelTypes = false,
                     },
                     completion = {
                         imports = {

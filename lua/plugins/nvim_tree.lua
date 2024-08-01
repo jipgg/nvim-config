@@ -15,6 +15,11 @@ local function setup()
                 inline_arrows = false,
             },
 	    },
+        respect_buf_cwd = true,
+        update_focused_file = {
+            enable = true,
+            update_cwd = true,
+        },
         view = {
             side = "right",
             width = 40;

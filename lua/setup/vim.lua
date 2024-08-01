@@ -15,4 +15,5 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.o.fillchars = 'eob: '
 vim.o.exrc = true
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
+

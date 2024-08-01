@@ -10,7 +10,7 @@ local Telescope = {
     FindFiles = "<leader>e",
     GitFiles = "<leader>g",
     LiveGrep = "<leader>d",
-    Buffer = "<leader>q",
+    Buffer = "<leader>r",
     CurrentBufferFuzzyFind = "<leader>f",
 }
 local NvimTree = {

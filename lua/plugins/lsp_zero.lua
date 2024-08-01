@@ -68,7 +68,7 @@ return {
                 -- see :help lsp-zero-keybindings
                 -- to learn the available actions
                 lsp_zero.default_keymaps({buffer = bufnr})
-                --require"lsp_overloader"(client, bufnr);
+                require"lsp_overloader"(client, bufnr);
             end)
 
             require('mason-lspconfig').setup({
