@@ -4,14 +4,21 @@ set("n", "<leader>i", vim.cmd.NvimTreeFocus)
 set("n", "<leader>I", vim.cmd.NvimTreeClose)
 set("n", "<leader>o", vim.cmd.ToggleTerm)
 set("t", "<Esc>", vim.cmd.ToggleTerm)
+set('n', "<leader>dr", vim.lsp.buf.rename) --rename
+set('n', "<leader>dq", function() vim.cmd"Gitsigns toggle_current_line_blame" end)
+set('n', "<leader>dn", function() vim.cmd"Gitsigns toggle_numhl" end)
+set('n', "<leader>dw", function() vim.cmd"Gitsigns toggle_word_diff" end)
 -- @ telescope
 local telescope_builtin = require('telescope.builtin')
-set('n', "<leader>a", telescope_builtin.find_files)
-set('n', "<leader>g", telescope_builtin.git_files)
-set('n', "<leader>r", telescope_builtin.live_grep)
-set('n', "<leader>n", telescope_builtin.buffers)
-set('n', "<leader>f", telescope_builtin.current_buffer_fuzzy_find)
-set('n', "<leader>b", telescope_builtin.diagnostics)
+set('n', "<leader>aj", telescope_builtin.find_files)
+set('n', "<leader>ag", telescope_builtin.git_files)
+set('n', "<leader>ai", telescope_builtin.live_grep)
+set('n', "<leader>ak", telescope_builtin.buffers)
+set('n', "<leader>ao", telescope_builtin.current_buffer_fuzzy_find)
+set('n', "<leader>al", telescope_builtin.diagnostics)
+set('n', "<leader>ah", telescope_builtin.help_tags)
+set('n', "<leader>ac", telescope_builtin.commands)
+set('n', "<leader>ap", telescope_builtin.keymaps)
 -- @ window motion leader
 set('n', '<leader>w', '<C-w>') --window commands w-h-j-k-l-c
 -- @ dap

@@ -1,7 +1,7 @@
 local function setup()
     local alpha = require 'alpha'
+    local theta = require "alpha.themes.theta"
     alpha.setup(require'alpha.themes.theta'.config)
-
 end
 
 return {
