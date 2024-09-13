@@ -1,7 +1,5 @@
 local set = vim.keymap.set
 -- @ nvim-tree
-set("n", "<leader>i", vim.cmd.NvimTreeFocus)
-set("n", "<leader>I", vim.cmd.NvimTreeClose)
 set("n", "<leader>o", vim.cmd.ToggleTerm)
 set("t", "<Esc>", vim.cmd.ToggleTerm)
 set('n', "<leader>dr", vim.lsp.buf.rename) --rename
@@ -46,3 +44,8 @@ end
 vim.api.nvim_create_user_command("Run", cpp_run, {})
 vim.api.nvim_create_user_command("Build", cpp_build, {})
 
+--oil
+
+set('n', '<leader>fo', function ()
+    vim.cmd"Oil"
+end)
