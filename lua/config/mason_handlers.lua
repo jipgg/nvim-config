@@ -20,18 +20,16 @@ return {
                     ['luau-lsp'] = {
                         diagnostics = {
                             strictDatamodelTypes = true,
-                        }
+                            --includeDependents = true,
+                            --workspace = true,
+                        },
+                        require = {
+                            --mode = "relativeToWorkspaceRoot",
+                            directoryAliases = require"luau-lsp".aliases();
+                        },
                     }
                 }
             }
-        }
-    end,
-    neocmake = function()
-        --Enable (broadcasting) snippet capability for completion
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities.textDocument.completion.completionItem.snippetSupport = true
-        require'lspconfig'.neocmake.setup {
-            capabilities = capabilities,
         }
     end,
     lua_ls = function()

@@ -23,6 +23,7 @@ vim.o.fencs = 'utf-8,utf-16le,default,latin1'
 vim.opt.signcolumn = "number"
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.api.nvim_set_option_value("clipboard", "unnamed", {})
 if __VSCODE__ then
     vim.o.exrc = false
 else--default
