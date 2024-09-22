@@ -10,6 +10,9 @@ local opts = {
     hide_numbers = true,
     persist_size = false,
 }
+if __WINDOWS__ then
+    opts.shell = "powershell.exe"
+end
 
 return {
     {'akinsho/toggleterm.nvim', version = "*", opts = opts}

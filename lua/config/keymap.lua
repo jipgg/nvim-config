@@ -23,6 +23,7 @@ set('n', '<leader>dbb', dap.toggle_breakpoint)
 set('n', '<leader>dbi', dap.step_into)
 set('n', '<leader>dbo', dap.step_out)
 set('n', '<leader>dbx', dap.terminate)
+set('n', '<leader>w', '<C-w>')
 
 CMAKE_PRESET = "linux-debug"
 CMAKE_BUILD_TYPE = "debug"

@@ -1,9 +1,9 @@
 return {
     {'Mofiqul/vscode.nvim', name = 'vscode', lazy = false, priority = 1000},
-    {"xiantang/darcula-dark.nvim", dependencies = {"nvim-treesitter/nvim-treesitter"}},
     {"zenbones-theme/zenbones.nvim", dependencies = { "rktjmp/lush.nvim" }},
     {"rebelot/kanagawa.nvim"},
-    {"sainnhe/sonokai", lazy = false},
-    {'navarasu/onedark.nvim'},
-    {"killitar/obscure.nvim",lazy = false, priority = 1000, opts = {}}
+    {"killitar/obscure.nvim",lazy = false, priority = 1000, opts = {}},
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    {"slugbyte/lackluster.nvim"},
+    {"steguiosaur/fullerene.nvim", lazy = false, priority = 1000}
 }
