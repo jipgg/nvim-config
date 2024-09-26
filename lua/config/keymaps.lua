@@ -24,20 +24,3 @@ set('n', '<leader>dbi', dap.step_into)
 set('n', '<leader>dbo', dap.step_out)
 set('n', '<leader>dbx', dap.terminate)
 set('n', '<leader>w', '<C-w>')
-
-CMAKE_PRESET = "linux-debug"
-CMAKE_BUILD_TYPE = "debug"
-CMAKE_PROJECT_NAME = "project"
-CMAKE_OUT_DIR = "out/%s"
-local function cpp_build()
-    local fmt = "cmake --preset %s ."
-    toggleterm.exec(string.format(fmt, CMAKE_PRESET))
-    toggleterm.exec(string.format(string.format("cmake --build %s", CMAKE_OUT_DIR), CMAKE_BUILD_TYPE))
-end
-
-local function cpp_run()
-    toggleterm.exec(("./%s/"):format(CMAKE_OUT_DIR:format(CMAKE_PRESET))..CMAKE_PROJECT_NAME)
-end
-vim.api.nvim_create_user_command("Run", cpp_run, {})
-vim.api.nvim_create_user_command("Build", cpp_build, {})
-
