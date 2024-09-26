@@ -6,19 +6,24 @@ local treesitter = {
     "luau",
     "vimdoc"
 }
-local mason = {
-    "clangd",
-    "lua_ls",
-    "cmake",
-    "luau_lsp",
-}
---platform specific lsps
 if __LINUX__ then
-    table.insert(mason, "bashls")
     table.insert(treesitter, "bash")
 elseif __WINDOWS__ then
     table.insert(treesitter, "c_sharp")
-    table.insert(mason, "csharp_ls")
+end
+local mason = {}
+if __MASON_ENSURE_INSTALLED__ then
+    mason = {
+        "clangd",
+        "lua_ls",
+        "cmake",
+        "luau_lsp",
+    }
+    if __LINUX__ then
+        table.insert(mason, "bashls")
+    elseif __WINDOWS__ then
+        table.insert(mason, "csharp_ls")
+    end
 end
 return {
     treesitter = treesitter;

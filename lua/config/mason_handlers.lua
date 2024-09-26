@@ -34,7 +34,11 @@ return {
     end,
     lua_ls = function()
         local t = {}
-        if __WINDOWS__ then t.root_dir = function() return vim.fn.getcwd() end end
+        if __WINDOWS__ then
+            t.root_dir = function()
+                return vim.fn.getcwd() -- hacky patch for not finding the correct working directory on windows
+            end
+        end
         lspconfig.lua_ls.setup(t)
     end,
     function(server_name) -- default handlers
