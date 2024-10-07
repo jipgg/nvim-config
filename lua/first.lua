@@ -12,3 +12,4 @@ Or keep it off and install LSPs manually with :Mason
 ]]
 
 __VSCODE_NEOVIM_EXT__ = vim.g.vscode --For when working with VSCodium Neovim extension
+--vim.g.zig_fmt_autosave = false

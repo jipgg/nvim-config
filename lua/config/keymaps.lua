@@ -24,3 +24,4 @@ set('n', '<leader>dbi', dap.step_into)
 set('n', '<leader>dbo', dap.step_out)
 set('n', '<leader>dbx', dap.terminate)
 set('n', '<leader>w', '<C-w>')
+set('n', '<leader>!', util.toggle_background);

@@ -5,5 +5,8 @@ return {
     {"killitar/obscure.nvim",lazy = false, priority = 1000, opts = {}},
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     {"slugbyte/lackluster.nvim"},
-    {"steguiosaur/fullerene.nvim", lazy = false, priority = 1000}
+    {"steguiosaur/fullerene.nvim", lazy = false, priority = 1000},
+    {"ishan9299/modus-theme-vim"},
+    {"Shatur/neovim-ayu"},
+    {"miffi/apropospriate.nvim"}
 }

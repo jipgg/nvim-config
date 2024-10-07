@@ -4,7 +4,8 @@ local treesitter = {
     "vim",
     "cpp",
     "luau",
-    "vimdoc"
+    "vimdoc",
+    "zig",
 }
 if __LINUX__ then
     table.insert(treesitter, "bash")
@@ -18,6 +19,7 @@ if __MASON_ENSURE_INSTALLED__ then
         "lua_ls",
         "cmake",
         "luau_lsp",
+        "zls",
     }
     if __LINUX__ then
         table.insert(mason, "bashls")
