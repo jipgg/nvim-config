@@ -18,23 +18,41 @@ return {
         }
     end,
     luau_lsp = function()
-        require('luau-lsp').setup {
-            platform = {
-                type = "standard",
-            },
-            server = {
-                settings = {
-                    ['luau-lsp'] = {
-                        diagnostics = {
-                            strictDatamodelTypes = true,
-                            --includeDependents = true,
-                            --workspace = true,
-                        },
-                        require = {
-                            --mode = "relativeToWorkspaceRoot",
-                            directoryAliases = require"luau-lsp".aliases();
-                        },
-                    }
+        lspconfig.luau_lsp.setup {
+            cmd = {"luau-lsp", "lsp", --[["--definitions=definitions.d.luau"]]},
+            settings = {
+                ["luau-lsp"] = {
+                    platform = {
+                        type = "standard",
+                    },
+                    require = {
+                        mode = "relativeToFile",
+                        -- directoryAliases = {
+                        --     ["legion"] = "./legion_luau/",
+                        -- },
+                    },
+                    sourcemap = {
+                        enabled = false,
+                        autogenerate = false,
+                    },
+                    index = {
+                        enabled = true,
+                    },
+                    hover = {
+                        strictDatamodelTypes = false,
+                    },
+                    diagnostics = {
+                        strictDatamodelTypes = true,
+                        includeDependents = true,
+                    },
+                    imports = {
+                        requireStyle = "auto",
+                        suggestRequires = true,
+                        suggestServices = false,
+                    },
+                    plugin = {
+                        enabled = false,
+                    },
                 }
             }
         }
@@ -52,6 +70,14 @@ return {
             t.root_dir = win_root_dir;
             lspconfig.sqlls.setup(t);
         end
+    end,
+    cssls = function ()
+        --Enable (broadcasting) snippet capability for completion
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        require'lspconfig'.cssls.setup {
+            capabilities = capabilities,
+        }
     end,
     function(server_name) -- default handlers
         lspconfig[server_name].setup({})
