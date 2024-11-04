@@ -24,4 +24,9 @@ set('n', '<leader>dbi', dap.step_into)
 set('n', '<leader>dbo', dap.step_out)
 set('n', '<leader>dbx', dap.terminate)
 set('n', '<leader>w', '<C-w>')
-set('n', '<leader>!', util.toggle_background);
+set('n', '<leader>!', util.toggle_background)
+
+set('n', '<leader>lr', vim.cmd.LspRestart)
+set('n', '<leader>lx', vim.cmd.LspStop)
+set('n', '<leader>ls', vim.cmd.LspStart)
+set('n', '<leader>la', vim.cmd.LspInfo)
