@@ -1,5 +1,5 @@
 return {
-    { 'Issafalcon/lsp-overloads.nvim'},
+    { 'Issafalcon/lsp-overloads.nvim', enabled = not __VSCODE_NEOVIM_EXT__},
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -10,6 +10,7 @@ return {
             vim.g.lsp_zero_extend_cmp = 0
             vim.g.lsp_zero_extend_lspconfig = 0
         end,
+        enabled = not __VSCODE_NEOVIM_EXT__,
     },
     {
         'williamboman/mason.nvim',
@@ -19,6 +20,7 @@ return {
   -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
+        enabled = not __VSCODE_NEOVIM_EXT__,
         event = 'InsertEnter',
         dependencies = {
             {'L3MON4D3/LuaSnip'},
@@ -52,6 +54,7 @@ return {
   -- LSP
     {
         'neovim/nvim-lspconfig',
+        enabled = not __VSCODE_NEOVIM_EXT__,
         cmd = {'LspInfo', 'LspInstall', 'LspStart'},
         event = {'BufReadPre', 'BufNewFile'},
         dependencies = {

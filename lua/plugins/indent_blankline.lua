@@ -13,4 +13,4 @@ end)
 require("ibl").setup { indent = { highlight = highlight } }
 end-----------------------------------------------------
 
-return { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = setup}
+return { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = setup, enabled = not __VSCODE_NEOVIM_EXT__}

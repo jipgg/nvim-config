@@ -1,4 +1,5 @@
-vim.cmd.colorscheme("modus-vivendi")
+vim.cmd.colorscheme("arctic")
+-- vim.cmd.colorscheme("modus-vivendi")
 -- vim.cmd.colorscheme("obscure")
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })

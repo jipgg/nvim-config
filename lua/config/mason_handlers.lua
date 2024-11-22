@@ -48,7 +48,7 @@ return {
                     imports = {
                         requireStyle = "auto",
                         suggestRequires = true,
-                        suggestServices = false,
+                        suggestServices = true,
                     },
                     plugin = {
                         enabled = false,

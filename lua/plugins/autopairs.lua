@@ -1,6 +1,6 @@
-local function setup()-----------------------------------
+local function setup()
 require("nvim-autopairs").setup {}
-end------------------------------------------------------
+end
 
 return {
 	"windwp/nvim-autopairs",
